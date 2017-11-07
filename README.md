@@ -1,5 +1,5 @@
 # Kafka-Connect-CosmosDB-Samples
-Contains sample files to use Cosmos DB Cassandra API through Kafka connect
+The repository contains sample files to use Cosmos DB Cassandra through Kafka connect
 
 We will be using the environment setup here https://github.com/Landoop/kafka-connectors-tests and configure the Source to use the Cosmos DB Cassandra using these samples.
 
@@ -40,5 +40,3 @@ Sample properties posted to cassandra-source-incr.properties file
             "connect.deprecated.fields.to.remove": "connect.cassandra.source.kcql"
 }
 ```
-
-3. Run the command 'Coyote' in kafka-connect-cassandra directory. This will run the commands specified in the coyote.yml file.
