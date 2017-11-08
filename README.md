@@ -1,4 +1,4 @@
-# Kafka-Connect-CosmosDB
+# Kafka Connect Cassandra source with CosmosDB
 Quick start to use Cosmos DB Cassandra as source through Kafka connect
 
 ## pre-requisites
