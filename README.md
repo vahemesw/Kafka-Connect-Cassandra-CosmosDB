@@ -8,7 +8,7 @@ Quick start to use Cosmos DB Cassandra as source through Kafka connect
 
 ## How to use Cosmos DB Cassandra as Kafka Connect Source 
 
-1. Setup Confluent and stream reactor . See http://docs.datamountaineer.com/en/latest/install.html#install for details. This will start the zookeeper, Kafka, schema-registry, kafka-rest  and connect.
+1. Setup Confluent and stream reactor . See http://docs.datamountaineer.com/en/latest/install.html#install for details. Starting confluent will start the zookeeper, Kafka, schema-registry, kafka-rest  and connect.
 
 2. Use cqlsh to create the table and insert data
 To connect to Cosmos DB Cassandra, you can launch cqlsh with following command
