@@ -48,7 +48,7 @@ bin/connect-distributed etc/schema-registry/connect-avro-distributed.properties
 ```
 
 7. Once the Connect is up we use the kafka-connect-tools cli to post the distributed properties file for Cassandra.
-Get the sample file from this repository
+Get the sample cassandra-source-cosmosdb.properties file from this repository
 ```
  java -jar kafka-connect-cli-1.0.4-all.jar create cassandra-source  < conf/cassandra-source-cosmosdb.properties
 ```
