@@ -10,6 +10,11 @@ Quick start to use Cosmos DB Cassandra as source through Kafka connect
 
 1. Setup Confluent and stream reactor . See http://docs.datamountaineer.com/en/latest/install.html#install for details. Starting confluent will start the zookeeper, Kafka, schema-registry, kafka-rest  and connect.
 
+Start the connect components with the command 
+```
+$CONFLUENT_HOME/bin/confluent start
+```
+
 2. Use cqlsh to create the table and insert data
 To connect to Cosmos DB Cassandra, you can launch cqlsh with following command
 
@@ -41,10 +46,13 @@ bin/connect-distributed etc/schema-registry/connect-avro-distributed.properties
 6. To fetch data from the created source table to Kafka topic, modify the following properties in the Cassandra configuration file with the Cosmos DB account details.
 
 ```
-"connect.cassandra.contact.points": "<Cassandra end point provided by Cosmos DB>",
-"connect.cassandra.port": "<Cassandra port provided by Cosmos DB>",
-"connect.cassandra.username": "<COSMOS DB ACCOUNT NAME>",
-"connect.cassandra.password": "<COSMOS DB ACCOUNT PASSWORD>",
+connect.cassandra.contact.points = <Cassandra end point provided by Cosmos DB>
+connect.cassandra.port = <Cassandra port provided by Cosmos DB>
+connect.cassandra.username = <COSMOS DB ACCOUNT NAME>
+connect.cassandra.password = <COSMOS DB ACCOUNT PASSWORD>
+connect.cassandra.ssl.enabled = true
+connect.cassandra.trust.store.path = <path to cacerts>
+connect.cassandra.trust.store.password = changeit
 ```
 
 7. Once the Connect is up we use the kafka-connect-tools cli to post the distributed properties file for Cassandra.
