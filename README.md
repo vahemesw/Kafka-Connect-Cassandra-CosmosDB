@@ -25,7 +25,7 @@ cqlsh <Cassandra end point provided by Cosmos DB> <Cassandra port provided by Co
 3. Create a keyspace, table and insert sample data as follows
 
 ```
-create keyspace source with replication = {'class' : 'SimpleStrategy', 'replication_factor' : 1};
+create keyspace source with replication = {'class' : 'NetworkTopologyStrategy'};
         
 create table IF NOT EXISTS source.orders (id int, user text, product text, qty int, price float, PRIMARY KEY (id, user))
         WITH CLUSTERING ORDER BY (user asc);
